@@ -1,0 +1,113 @@
+
+<!--This is the My Recent Projects of dashboad page-->
+
+<div class = "subtitle">
+  <div>
+    <p>My Projects (25)
+    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i>
+    Add project</button> </p>
+  </div>        
+</div>
+
+<hr>
+
+<!-- All Project Thumbnails -->
+<div class="all_projects">
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img src="/img/thumb1.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+    	</div>
+	</div>
+
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb1.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class=" thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb1.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb1.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <!--A few row of thumbnail example -->
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img src="/img/thumb1.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb2.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class=" thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb3.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="thumbnail_shot col-sm-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img  src="/img/thumb4.jpg"></a>
+        <div class="caption_wrapper">
+          <ul class="caption">
+            <li><i class="fa fa-eye"></i> 23 </li>
+            <li><a href="#"><i class="fa fa-comment"></i> 6 </a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> 20 </a></li>
+          </ul>
+        </div>
+    </div>
+
+  </div>

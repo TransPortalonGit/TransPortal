@@ -1,0 +1,17 @@
+<div class="profile_header">
+	<div class= "brief_profile">
+	  <a href="#"> <img src="/img/profile_img.png" class="img-responsive img-thumbnail" alt="Responsive image" ></a>
+	</div>
+	<div class="bio">
+		<h5><strong><?php echo $user->username; ?></strong></h5>
+  		<small>I like creation, I like turrle! </small></br>
+  		<small><?php echo $user->zipcode; ?> <?php echo $user->city; ?></small> </div>
+	<div class="basic_info">
+	 	<div class="btn-group">
+	  	<button type="button" class="btn btn-default">Project</br>26</button>
+	  	<button type="button" class="btn btn-default">Collections</br>17</button>
+	  	<button type="button" class="btn btn-default">Followings</br>22</button>
+	  	<button type="button" class="btn btn-default">Followers</br>36</button>
+		</div>
+	</div>
+</div>

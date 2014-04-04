@@ -1,0 +1,19 @@
+<div class= "main_tabs">
+	<ul class="nav nav-pills nav-justified">
+	  <li <?php echo ( preg_match("#profile/show#i", Request::path()) ) ? 'class="active"' : ''; ?>>
+	    <a href="/profile/show/<?php echo $user->username; ?>">Dashboard</a>
+	  </li>
+	  <li <?php echo ( preg_match("#profile/projects#i", Request::path()) ) ? 'class="active"' : ''; ?>>
+	    <a href="/profile/projects">Projects</a>
+	  </li>
+	  <li <?php echo ( preg_match("#profile/appointments#i", Request::path()) ) ? 'class="active"' : ''; ?>>
+	    <a href="/profile/appointments">Appointments</a>
+	  </li>
+	  <li <?php echo ( preg_match("#profile/inventory#i", Request::path()) ) ? 'class="active"' : ''; ?>>
+	    <a href="/profile/inventory">Inventory</a>
+	  </li>
+	  <li <?php echo ( preg_match("#profile/usagedata#i", Request::path()) ) ? 'class="active"' : ''; ?>>
+	    <a href="/profile/usagedata">Usage Data</a>
+	  </li>
+	</ul>
+</div>

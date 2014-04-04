@@ -1,0 +1,210 @@
+[2014-03-24 05:46:49] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 06:31:46] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 06:31:49] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 06:31:53] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 15:00:28] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 15:00:29] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 15:00:29] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 15:00:30] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:13] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:13] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:14] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:14] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:15] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 16:50:15] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 19:30:39] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1429
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-03-24 19:45:39] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('1')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-03-24 19:49:11] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('0')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('0')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-03-24 20:01:55] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('1')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-03-24 20:03:35] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('1')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-03-24 20:03:51] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('1')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-03-24 20:11:28] log.ERROR: exception 'ErrorException' with message 'Missing argument 2 for AuthController::getQrscan()' in /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php:24
+Stack trace:
+#0 /var/www_2/supperman/20131120_release/release/app/controllers/AuthController.php(24): Illuminate\Exception\Handler->handleError(2, 'Missing argumen...', '/var/www_2/supp...', 24, Array)
+#1 [internal function]: AuthController->getQrscan('0')
+#2 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#3 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('getQrscan', Array)
+#4 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getQrscan', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('0')
+#6 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www_2/supperman/20131120_release/release/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www_2/supperman/20131120_release/release/public/index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []

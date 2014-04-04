@@ -1,0 +1,62 @@
+
+<?php $__env->startSection('content'); ?>
+
+<table class="table">
+    <tr>
+        <td bgcolor="#BEC3C7">
+            <h4><span class="glyphicon glyphicon-user"></span> <a href="/admin/users"> Users List </a> > View User</h4>
+        </td>
+    </tr>
+</table>
+
+<div class="row">
+	<div class="col-xs-3">
+		<!-- Username -->
+		<div>
+			<label>Id:</label>
+			<?php echo $users->id; ?>
+		</div>
+		<div>
+			<label>Role:</label>
+			<?php if ($users->Role === 2): ?>
+			<?php echo "Member"; ?>		
+			<?php else: ?>
+			<?php echo "Administrator"; ?>		
+			<?php endif; ?>
+		</div>
+		<div>
+			<label>Username:</label>
+			<?php echo $users->username; ?>
+		</div>
+		<div>
+			<label>Title:</label>
+			<?php echo $users->title; ?>
+		</div>
+		<div>
+			<label>First Name:</label>
+			<?php echo $users->first_name; ?>
+		</div>
+		<div>
+			<label>Last Name:</label>
+			<?php echo $users->last_name; ?>
+		</div>
+		<div>
+			<label>E-mail:</label>
+			<?php echo $users->email; ?>
+		</div>
+		<div>
+			<label>Company:</label>
+			<?php echo $users->company; ?>
+		</div>
+		<div>
+			<label>Address:</label>
+			<?php echo $users->street . " " . $users->city . ", " . $users->zipcode; ?>
+		</div>
+		<div>
+			<label>QR-Key:</label>
+			<p> <?php echo HTML::image('qr-pics/' . $users->id . '.png');; ?> </p>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

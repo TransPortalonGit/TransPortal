@@ -1,0 +1,44 @@
+
+<?php $__env->startSection('head'); ?>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('.cover-item').click(function(e){
+		e.preventDefault();
+		window.location = $(this).find('a:first').attr('href');
+	});
+	
+});
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<div class="row">
+		<div class="span12" id="project">
+			<div class="shield">
+				<h1>Projects</h1>
+				<?php if (Sentry::Check()): ?>
+				<a href="/projects/create" class="btn btn-admin"><i class="icon-plus"></i></a>
+				<?php endif; ?>
+			</div>
+
+			<h3 style="color: #d00;">Want to show what you have done? <small>Simply <a href="/account/register/">register</a> for an account.</small></h3>
+
+			<?php foreach($projects as $project): ?>
+			<div class="cover-item">
+				<div class="cover-item-content">
+					<h2><a href="/projects/show/<?php echo $project->id; ?>"><?php echo $project->title; ?></a></h2>
+					<p><?php echo $project->description; ?></p>
+				</div>
+				<div class="cover-item-author">By <?php echo $project->user->fullname(); ?> <span class="muted">– <?php echo date("d.m.Y", strtotime($project->created_at));; ?></span></div>
+				
+			</div>
+			<?php endforeach; ?>
+
+			<?php echo $projects->links();; ?>
+				
+		</div>
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

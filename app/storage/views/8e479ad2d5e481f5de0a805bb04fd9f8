@@ -1,0 +1,28 @@
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-book"></i> Documentation
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	<div class="row">
+	
+		<div class="span12">
+			<div class="content">
+				<h3>Overview</h3>
+				
+				
+				<div class="pull-left">
+				
+					IMAGE <br />
+					This is a short description<br />
+					<a href="/documentation/view/1">Link</a>
+				
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

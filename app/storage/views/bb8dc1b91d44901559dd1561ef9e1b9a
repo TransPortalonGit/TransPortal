@@ -1,0 +1,55 @@
+
+<?php $__env->startSection('content'); ?>
+
+<h1>Log into your account</h1>
+
+<div class="row">
+	<div class="span6">
+
+		<form method="post" action="" class="form-horizontal">
+			<!-- CSRF Token -->
+			<input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>" />
+
+			<?php echo Session::has('error') ? '<p class="alert alert-warning">' . Session::get('error') . '</p>' : ''; ?>
+			
+			<!-- Email -->
+			<div class="control-group <?php echo $errors->has('username') ? 'error' : ''; ?>">
+				<label class="control-label" for="username">Username</label>
+				<div class="controls">
+					<input type="text" name="username" id="username" value="<?php echo Input::old('username'); ?>" />
+					<?php echo $errors->first('username', '<span class="help-inline">:message</span>'); ?>
+				</div>
+			</div>
+
+			<!-- Password -->
+			<div class="control-group <?php echo $errors->has('password') ? 'error' : ''; ?>">
+				<label class="control-label" for="password">Password</label>
+				<div class="controls">
+					<input type="password" name="password" id="password" value="" />
+					<?php echo $errors->first('password', '<span class="help-inline">:message</span>'); ?>
+				</div>
+			</div>
+
+			<!-- Remember me -->
+			<div class="control-group">
+				<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox" name="remember-me" id="remember-me" value="1" /> Remember me
+					</label>
+				</div>
+			</div>
+
+			<!-- Form actions -->
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn">Log in</button>
+
+					<a href="<?php echo URL::to('account/forgot-password'); ?>">Forgot your password?</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

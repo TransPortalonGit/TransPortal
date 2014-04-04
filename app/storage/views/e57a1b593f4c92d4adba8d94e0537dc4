@@ -1,0 +1,73 @@
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-book"></i> <a href="/tutorials">Tutorials</a> <i class="icon-angle-right"></i> <?php echo $tutorial->title; ?>
+	<?php if (Sentry::getUser()->hasAccess('is_admin')): ?>
+	<a href="/tutorials/edit/<?php echo $tutorial->id; ?>" class="pull-right btn btn-primary"><i class="icon-pencil"></i></a>
+	<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('head'); ?>
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('body').scrollspy({offset: 90});
+
+	$("#sectionbar .nav > li > a.goto").bind("click", function(event) {
+		event.preventDefault();
+		var target = $(this).attr("href");
+		$('html,body').animate({
+			scrollTop: $(target).offset().top - 90
+		}, 300 , function (){location.hash = target;});
+    });
+	
+});
+
+</script>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+	<div class="row">
+
+		<div id="sectionbar" class="span3 hidden-phone">
+				<ul class="span3 nav nav-tabs nav-stacked affix" style="margin:0" >
+					<li class="active"><a href="#abstract" class="goto"><i class="icon-bookmark"></i> Abstract<i class="icon-chevron-right"></i></a></li>
+					<li class="divider"></li>
+					<?php
+					for ($a=1; $a<= count($steps); $a++) {
+						echo '<li><a href="#section'.$a.'" class="goto"> '.$a.': '. $headings[$a-1].'<i class="icon-chevron-right"></i></a></li>';
+					}
+					?>
+				</ul>
+		</div>
+		<div class="span9" id="tutorial">
+			<div>
+				<section id="abstract">
+				<div class="page-header">
+					<h1><?php echo $tutorial->title; ?></h1>
+					<p class="author">By <?php echo $tutorial->user_id; ?> Dr. Dennis Krannich	<span class="muted">– <?php echo date("d.m.Y", strtotime($tutorial->created_at));; ?></span></p>
+				</div>
+				<p class="lead"><?php echo $tutorial->description; ?></p>
+
+				<hr />
+				</section>
+				
+				<?php $step_id = 1;?>
+				<?php foreach ($steps as $step): ?>
+				<section id="section<?php echo $step_id; ?>">
+					<?php echo $step; ?>
+					<?php $step_id++;?>
+				</section>
+				<?php endforeach; ?>
+
+			</div>
+		</div>
+		
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

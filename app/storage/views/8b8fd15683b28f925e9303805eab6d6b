@@ -1,0 +1,39 @@
+
+<?php $__env->startSection('content'); ?>
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>E-mail</th>
+			<th>Account</th>
+			<th>Online Status</th>
+		</tr>
+	</thead>
+	<tbody>
+    <?php foreach($users as $user): ?>
+    	<tr>
+    		<td>
+        		<?php echo $user->username; ?>
+    		</td>
+    		<td>
+        		<?php echo $user->email; ?>
+    		</td>
+			<td>
+        		<?php if($user->activated): ?>
+        		<?php echo "activated "; ?>
+        		<?php else: ?>
+        		<?php echo "not activated"; ?>
+        		<?php endif; ?>
+    		</td>
+    		<td>
+        		<?php echo "o"; ?>
+    		</td>
+		</tr>
+    <?php endforeach; ?>		
+	</tbody>
+</table>
+
+<?php echo $users->links();; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

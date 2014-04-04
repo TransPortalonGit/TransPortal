@@ -1,0 +1,235 @@
+
+<?php $__env->startSection('head'); ?>
+
+<script type="text/javascript">
+
+function delete_item(id, name) {
+    bootbox.confirm("Are you sure you want to delete " + name + "?", function(result) {
+
+        if(result==true) {
+           window.location = "/admin/inventory/delete/" + id + "/" + encodeURIComponent(name);
+        }
+
+    }); 
+}
+
+function return_lentitem(item_id, due_at) {
+    bootbox.confirm("Are you sure you want to return " + item_id + "?", function(result) {
+
+        if(result==true) {
+           window.location = "/admin/inventory/return/" + item_id + "/" + encodeURIComponent(due_at);
+        }
+
+    }); 
+}
+
+function edit_item(id) {
+    window.location = "/admin/inventory/edit/" + id;
+}
+
+function edit_lentitem(item_id) {
+    window.location = "/admin/inventory/lentitem/edit/" + item_id;
+}
+
+function view_item(id) {
+    window.location = "/admin/inventory/view/" + id;
+}
+
+function viewlent_item(id) {
+    window.location = "/admin/inventory/viewlent/" + id;
+}
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<ol class="breadcrumb">
+  <li><span class="fa fa-home home-btn"></span><a href="/admin"> Home</a></li>
+  <li class="active">Inventory</li>
+<hr>
+</ol>
+
+<!-- Error msg start -->
+<?php if($errors->any()): ?>
+<?php echo ($errors->first()) ? '<p class="alert alert-danger alert-dismissable" style="margin-top: 10px;">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Item cannot be deleted because it is already loaned to someone.</p>': ''; ?>
+<?php endif; ?>
+<!-- Error msg end -->
+
+<div class="adminpage-label">      
+    <h4><span class="fa fa-gavel"></span> Item List</h4>       
+</div>
+<div class="adminpage-sorter">  
+       
+            <div style="float: left;"><a href="/admin/inventory/add"><button type="submit" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> add item</button></a></div>
+            <div>
+                <form method="GET" name="pagination" id="pagination" title="number of items shown">
+                    <select name="itmsperpage" id="itmsperpage" class="form-control" style="margin-right: 5px;">
+                      <option value="5" <?php if($itmsperpage == 5): ?> selected <?php endif; ?>>5</option>
+                      <option value="10" <?php if($itmsperpage == 10): ?> selected <?php endif; ?>>10</option>
+                      <option value="15" <?php if($itmsperpage == 15): ?> selected <?php endif; ?>>15</option>
+                      <option value="25" <?php if($itmsperpage == 25): ?> selected <?php endif; ?>>25</option>
+                      <option value="35" <?php if($itmsperpage == 35): ?> selected <?php endif; ?>>35</option>
+                    </select> 
+            </div>
+            <div style="float: right;">           
+                    <select name="sortby" id="sortby" class="form-control">
+                      <option value="id" <?php if($sortby == 'id'): ?> selected <?php endif; ?>>Id</option>
+                      <option value="name" <?php if($sortby == 'name'): ?> selected <?php endif; ?>>Name</option>
+                      <option value="quantity" <?php if($sortby == 'quantity'): ?> selected <?php endif; ?>>Quantity</option>
+                      <option value="category" <?php if($sortby == 'category'): ?> selected <?php endif; ?>>Category</option>
+                      <option value="status" <?php if($sortby == 'status'): ?> selected <?php endif; ?>>Status</option>
+                    </select>
+                </form>
+            </div>
+    </div>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($items as $item): ?>
+        <tr>
+            <td>
+                <?php echo $item->id; ?>
+            </td>
+            <td>
+                <?php echo $item->name; ?>
+            </td>
+            <td>
+                <?php echo $item->quantity; ?>
+            </td>
+            <td>
+                <?php if($item->category == 1): ?>
+                lab only
+                <?php else: ?>
+                loanable
+                <?php endif; ?>
+            </td>
+            <td>
+                <?php if($item->status == 0): ?>
+                active
+                <?php else: ?>
+                loaned
+                <?php endif; ?>
+            </td>
+            <td>
+                <button onClick="view_item(<?php echo $item->id; ?>);" type="button" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-eye-open"></span> View</button>
+                <button onClick="edit_item(<?php echo $item->id; ?>);" type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-wrench"></span> Edit</button>
+                <button onclick="delete_item(<?php echo $item->id; ?>, '<?php echo $item->name; ?>');" type="button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+            </td>
+        </tr>
+    <?php endforeach; ?>     
+    </tbody>
+</table>
+<table align="right">
+    <tr>
+        <td>
+<?php echo $items->appends(Request::except('page'))->links();; ?>
+        </td>
+    </tr>
+</table>
+</br>
+
+<!-- Loaned items -->
+</br>
+
+        <div  class="adminpage-label">
+            <h4><span class="fa fa-credit-card"></span> Loaned Items</h4>
+        </div>
+
+<table>
+    <tr>
+        <td align="center">
+            <a href="/admin/inventory/lend"><button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-asterisk"></span> lend item</button></a>
+        </td>
+    </tr>
+</table>
+<p>
+</p>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Item Id</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>User Id</th>
+            <th>Username</th>
+            <th>Due Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <?php foreach($itemsusers as $itemsuser): ?>
+        <tr>
+            <td>
+                <?php echo $itemsuser->item_id; ?>
+            </td>
+            <td>
+                <?php foreach($items as $item): ?>
+                    <?php if($itemsuser->item_id == $item->id): ?> 
+                    <?php echo $item->name; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </td>
+            <td>
+                <?php echo $itemsuser->quantity; ?>
+            </td>
+            <td>
+                <?php echo $itemsuser->user_id; ?>
+            </td>
+            <td>
+                <?php foreach($users as $user): ?>
+                    <?php if($itemsuser->user_id == $user->id): ?> 
+                    <?php echo $user->username; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </td>
+            <td>
+                <?php echo $itemsuser->due_at; ?>
+            </td>
+            <td>
+                <button onClick="viewlent_item(<?php echo $itemsuser->id; ?>);" type="button" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-eye-open"></span> View</button>
+                <button onClick="edit_lentitem(<?php echo $itemsuser->item_id; ?>);" type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-wrench"></span> Edit</button>
+                <button onClick="return_lentitem(<?php echo $itemsuser->item_id; ?>, '<?php echo $itemsuser->due_at; ?>');" type="button" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-saved"></span> Return</button>
+            </td>
+        </tr>
+    <?php endforeach; ?>     
+    </tbody>
+</table>
+<table align="right">
+    <tr>
+        <td>
+<!-- { $itemsusers->links(); }} -->
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+
+$('#itmsperpage').change(
+    function() {
+        $('#pagination').trigger('submit');
+});
+
+$('#sortby').change(
+    function() {
+        $('#pagination').trigger('submit');
+});
+
+</script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

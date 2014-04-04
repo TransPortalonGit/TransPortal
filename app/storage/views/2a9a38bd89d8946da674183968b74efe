@@ -1,0 +1,16 @@
+
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-user"></i> Profile of <?php echo $user->first_name . " " . $user->last_name; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="row">
+
+	<div class="span12">
+		
+		
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

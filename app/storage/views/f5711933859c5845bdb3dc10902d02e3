@@ -1,0 +1,142 @@
+
+<?php $__env->startSection('head'); ?>
+
+<script type="text/javascript">
+
+function delete_user(id, username) {
+    bootbox.confirm("Are you sure you want to delete " + username + "?", function(result) {
+
+        if(result==true) {
+           window.location = "/admin/users/delete/" + id + "/" + encodeURIComponent(username);
+        }
+
+    }); 
+}
+
+function edit_user(id) {
+    window.location = "/admin/users/edit/" + id;
+}
+
+function view_user(id) {
+    window.location = "/admin/users/view/" + id;
+}
+
+function activate_user(id) {
+    window.location = "/admin/users/activate/" + id;
+}
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<ol class="breadcrumb">
+  <li><span class="fa fa-home home-btn"></span><a href="/admin"> Home</a></li>
+  <li class="active">Users</li>
+<hr>
+</ol>
+
+    <div class="adminpage-label">
+        <h4><span class="fa fa-user"></span> Users List</h4>
+    </div>
+
+
+    <div class="adminpage-sorter">  
+       
+            <div style="float: left;"><a href="/admin/users/add"><button type="submit" class="btn btn-default btn-sm"><i class="fa fa-plus-circle"></i> add user</button></a></div>
+            <div> 
+                <form method="GET" id="pagination" title="number of items shown">
+                    <select class="form-control" name="usrsperpage" id="usrsperpage" style="margin-right: 5px;">
+                      <option value="5" <?php if($usrsperpage == 5): ?> selected <?php endif; ?>>5</option>
+                      <option value="10" <?php if($usrsperpage == 10): ?> selected <?php endif; ?>>10</option>
+                      <option value="15" <?php if($usrsperpage == 15): ?> selected <?php endif; ?>>15</option>
+                      <option value="25" <?php if($usrsperpage == 25): ?> selected <?php endif; ?>>25</option>
+                      <option value="35" <?php if($usrsperpage == 35): ?> selected <?php endif; ?>>35</option>
+                    </select> 
+            </div>
+            <div style="float: right;">                 
+                    <select class="form-control" name="sortby" id="sortby">
+                      <option value="id" <?php if($sortby == 'id'): ?> selected <?php endif; ?>>Id</option>
+                      <option value="username" <?php if($sortby == 'username'): ?> selected <?php endif; ?>>Username</option>
+                      <option value="Role" <?php if($sortby == 'Role'): ?> selected <?php endif; ?>>Role</option>
+                      <option value="activated" <?php if($sortby == 'activated'): ?> selected <?php endif; ?>>Account</option>
+                    </select>
+                </form>
+            </div>
+    </div>
+
+
+
+
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>E-mail</th>
+			<th>Account</th>
+			<th>Role</th>
+            <th>Controls</th>
+		</tr>
+	</thead>
+	<tbody>
+    <?php foreach($users as $user): ?>
+    	<tr>
+    		<td>
+        		<?php echo $user->username; ?>
+    		</td>
+    		<td>
+        		<?php echo $user->email; ?>
+    		</td>
+			<td>
+        		<?php if($user->activated): ?>
+        		activated
+        		<?php else: ?>
+        		inactive
+        		<?php endif; ?>
+    		</td>
+    		<td>
+        		<?php if ($user->hasAccess("is_admin")): ?>
+                admin       
+                <?php else: ?>
+                member      
+                <?php endif; ?>
+    		</td>
+            <td>
+                <button onClick="view_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-eye-open"></span> View</button>
+                <button onClick="edit_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-wrench"></span> Edit</button>
+                <button onclick="delete_user(<?php echo $user->id; ?>, '<?php echo $user->username; ?>');" type="button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <?php if($user->activated): ?>
+                <button onClick="block_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove-sign"></span> Block</button>
+                <?php else: ?>
+                <button onClick="activate_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Activate</button>
+                <?php endif; ?>
+            </td>
+		</tr>
+    <?php endforeach; ?>		
+	</tbody>
+</table>
+<table align="right">
+    <tr>
+        <td>
+<?php echo $users->appends(Request::except('page'))->links();; ?>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+
+$('#usrsperpage').change(
+    function() {
+        $('#pagination').trigger('submit');
+});
+
+$('#sortby').change(
+    function() {
+        $('#pagination').trigger('submit');
+});
+
+</script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

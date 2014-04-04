@@ -1,0 +1,20 @@
+
+<?php $__env->startSection('head'); ?>
+
+<script type="text/javascript">
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<ol class="breadcrumb">
+  <li><i class="fa fa-home home-btn"></i><a href="/admin"> Home</a></li>
+  <li class="active">Analytics</li>
+<hr>
+</ol>
+
+	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

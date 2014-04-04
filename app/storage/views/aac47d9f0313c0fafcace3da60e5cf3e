@@ -1,0 +1,86 @@
+	<meta http-equiv="cleartype" content="on">
+	
+	<meta name="application-name" content="TransPortal" />
+
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="googlebot" content="noindex,nofollow" />
+
+	<meta name="author" content="Xiaofen Peng, Raksmey Meas, Simon Engelbertz, Stefanos-Rafail Trialonis" />
+	<meta name="description" content="Multipurpose platform uniquely designed for FabLab users and personel" />
+	<meta name="keywords" content="DIY, social, crafty, share, document, connect, dimeb, fablab, Uni Bremen, bremen, Universität Bremen" />
+
+	<meta name="handheldfriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+			
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+		
+	<meta name="format-detection" content="telephone=no" />
+
+	<?php echo HTML::style('/css/bootstrap.min.css'); ?>
+	<?php echo HTML::style('/css/bootstrap-theme.min.css'); ?>
+	<?php echo HTML::style('/css/font-awesome.min.css'); ?>
+	<?php echo HTML::style('/css/jquery.pnotify.default.css'); ?>
+	<?php echo HTML::style('/css/app.css'); ?>
+	
+
+	<?php echo HTML::script('/js/jquery.min.js'); ?>
+	<?php echo HTML::script('/js/bootstrap.min.js'); ?>
+	<?php echo HTML::script('/js/bootbox.min.js'); ?>
+	<?php echo HTML::script('/js/jquery.pnotify.min.js'); ?>
+	
+	<?php if (Session::get('error')): ?>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$.pnotify({
+			    	text: '<?php echo Session::get('error');; ?>',
+			    	type: 'error',
+			    	history: false
+			    });
+			});
+		</script>
+	<?php endif; ?>
+
+	<?php if (Session::get('success')): ?>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('<div>')
+					.attr( 'id', 'alertmsg1' )
+				    .html(
+				     '<h1>Success</h1>' +
+				     '<p>' +
+				     '<?php echo Session::get('success');; ?>' +
+				     '</p>')
+				  	.addClass('alert alert-success flyover flyover-bottom')
+				  	.appendTo( $('body') );
+				  	$('#alertmsg1').addClass('in');
+
+			         setTimeout(function() {
+			            $('#alertmsg1').removeClass('in');
+			         }, 3200);
+							
+			});
+		</script>
+	<?php endif; ?>
+		
+
+		<!-- <script type="text/javascript">
+			$(document).ready(function () {
+				$.pnotify({
+			    	text: '<?php echo Session::get('success');; ?>',
+			    	type: 'success',
+			    	history: false
+			    });
+			});
+		</script> -->
+	
+	
+	<script type="text/javascript">	
+	$(document).ready(function () {
+				
+		$('.nav-select-box').on('change',function(){
+			window.location = $(this).find('option:selected').val();
+		});
+	
+	});
+	</script>

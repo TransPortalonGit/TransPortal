@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	
+	<title>[dx]lab - the fablab at university bremen</title>
+
+	<?php echo $__env->make('layouts._head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	<script type="text/javascript">	
+	$(document).ready(function () {
+				
+		$('.nav-select-box').on('change',function(){
+			window.location = $(this).find('option:selected').val();
+		});
+	
+	});
+	</script>
+
+	<?php echo $__env->yieldContent('head'); ?>
+
+</head>
+<body>
+
+<header id="topnav">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<a href="/home"><img src="/img/dxlab_logo.png"></a>
+				<nav class="menu pull-right">
+					<?php echo $__env->make('layouts._navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				</nav>
+				<div class="clearfix"></div>
+				<hr class="soften" />
+			</div>
+		</div>
+	</div>
+	<div class="ribbon-wrapper">
+		<div class="ribbon ribbon-red">BETA</div>
+	</div>
+</header>
+
+<div class="content_container container">
+	<?php echo $__env->yieldContent('content'); ?>	
+</div>
+
+
+<footer>
+	&copy; 2013 by [dx]lab
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+<?php $__env->startSection('content'); ?>
+<div class="row">
+	<div class="col-xs-12"> 
+		<div class="content_container container">
+
+			<?php echo $__env->make('site.profile._user_profileheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>			
+
+			<?php echo $__env->make('site.profile._user_navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+			<?php echo $__env->make('site.profile.projects._user_projects', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

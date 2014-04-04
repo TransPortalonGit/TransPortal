@@ -1,0 +1,96 @@
+
+<?php $__env->startSection('content'); ?>
+
+<div class="row">
+
+	<div class="col-xs-12">
+		
+		
+		<div class="content_container container">
+			<?php echo $__env->make('site.profile._user_profileheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+			<?php if (Sentry::Check()): ?>
+				<?php echo $__env->make('site.profile._user_navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php endif; ?>
+
+			<!--This is the My Recent Projects of dashboad page-->
+			<div>
+			    <h4>My Recent Projects</h4>
+			    <hr>
+			</div>
+
+			<!-- Project Thumbnails -->
+			<div class="row">
+			    <div class="col-sm-6 col-md-3">
+			      <a href="#" class="img-responsive img-thumbnail">
+			        <img data-src="/holder.js/100%x200" src="/img/thumb1.jpg"></a>
+			    </div>
+
+			    <div class="col-sm-6 col-md-3">
+			      <a href="#" class="img-responsive img-thumbnail">
+			        <img data-src="/holder.js/100%x180" src="/img/thumb2.jpg"></a>
+			    </div>
+
+			    <div class="col-sm-6 col-md-3">
+			      <a href="#" class="img-responsive img-thumbnail">
+			        <img data-src="/holder.js/100%x180" src="/img/thumb3.jpg"></a>
+			    </div>
+
+			    <div class="col-sm-6 col-md-3">
+			      <a href="#" class="img-responsive img-thumbnail">
+			        <img data-src="/holder.js/100%x180" src="/img/thumb4.jpg"></a>
+			    </div>
+			</div>
+			<!-- Newsfeed-->
+			<div>
+			    <h4>My Newsfeed</h4>
+			    <hr>
+			    <div>
+			      <table>
+			        <td>
+			          <select class="form-control">
+			            <option>all</option>
+			            <option>comments</option>
+			            <option>following</option>
+			            <option>Inventory</option>
+			            <option>Appointment</option>
+			          </select>
+			        </td>
+			      </table>
+			    </div>
+			    <!-- Comments Section starts here -->
+			    <div>
+	      			<div>
+				        <table>
+				          <td>
+				            <div  class="commentPic">
+				              <a href="#">
+				                <img src="/img/doge.jpg"></a>
+				            </div>
+				          </td>
+				          <td>
+				            <div class="commentName">
+				              <h5>Doge</h5>
+				              <p>This project is so wow. Such beauty. So doge. Much like.</p>
+				            </div>
+				          </td>
+			        	</table>
+		      		</div>
+	      		</div>	
+				<div class="pull-right">
+				  <a href="#"> More
+				    <i class=" fa fa-chevron-right"></i>
+				  </a>
+				  <span class="hide">likes</span>
+				</div>
+				<!--COMMENTS END HERE-->					
+			</div>
+			<!-- CONTENT ENDS HERE -->
+		</div>
+		
+	</div>
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

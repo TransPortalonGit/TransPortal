@@ -1,0 +1,112 @@
+
+<?php $__env->startSection('head'); ?>
+
+<script type="text/javascript">
+
+function delete_user(id, username) {
+    bootbox.confirm("Are you sure you want to delete " + username + "?", function(result) {
+
+        if(result==true) {
+           window.location = "/admin/users/delete/" + id + "/" + encodeURIComponent(username);
+        }
+
+    }); 
+}
+
+function edit_user(id) {
+    window.location = "/admin/users/edit/" + id;
+}
+
+function view_user(id) {
+    window.location = "/admin/users/view/" + id;
+}
+
+function activate_user(id) {
+    window.location = "/admin/users/activate/" + id;
+}
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<?php 
+/* <?php echo form::open(array('method'=>'post', 'action'=>'/admin/users/delete')); ?>
+<?php echo form::close; ?>
+ */
+?>
+
+<table class="table">
+    <tr>
+        <td bgcolor="#BEC3C7">
+            <h4><span class="glyphicon glyphicon-user"></span> Users List</h4>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td align="center">
+            <a href="/admin/users/add"><button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-asterisk"></span> add user</button></a>
+        </td>
+    </tr>
+</table>
+<p>
+</p>
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>E-mail</th>
+			<th>Account</th>
+			<th>Role</th>
+            <th>Controls</th>
+		</tr>
+	</thead>
+	<tbody>
+    <?php foreach($users as $user): ?>
+    	<tr>
+    		<td>
+        		<?php echo $user->username; ?>
+    		</td>
+    		<td>
+        		<?php echo $user->email; ?>
+    		</td>
+			<td>
+        		<?php if($user->activated): ?>
+        		activated
+        		<?php else: ?>
+        		not activated
+        		<?php endif; ?>
+    		</td>
+    		<td>
+        		<?php if($user->Role === 1): ?>
+                administrator       
+                <?php else: ?>
+                member
+                <?php endif; ?>
+    		</td>
+            <td>
+                <?php if($user->activated): ?>
+                <button onClick="activate_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-success  disabled"><span class="glyphicon glyphicon-ok-sign"></span> Activate</button>
+                <?php else: ?>
+                <button onClick="activate_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Activate</button>
+                <?php endif; ?>
+                <button onClick="view_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-eye-open"></span> View</button>
+                <button onClick="edit_user(<?php echo $user->id; ?>);" type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-wrench"></span> Edit</button>
+                <button onclick="delete_user(<?php echo $user->id; ?>, '<?php echo $user->username; ?>');" type="button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+            </td>
+		</tr>
+    <?php endforeach; ?>		
+	</tbody>
+</table>
+<table align="right">
+    <tr>
+        <td>
+<?php echo $users->links();; ?>
+        </td>
+    </tr>
+</table>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

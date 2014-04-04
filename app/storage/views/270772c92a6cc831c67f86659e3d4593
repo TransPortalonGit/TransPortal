@@ -1,0 +1,63 @@
+
+<!--This is the My Projects of Project tab-->
+  
+
+  <div style="margin-top:10px;">
+   
+    <p style="width: 100px; display: inline;"> My Projects (<?php echo count($projects); ?>)</p>
+    <a href="/projects/create" style="float: right; width: 100px; display: inline-block;" title="Add new project">
+     <div class="add_project_btn"> 
+        <i class="fa  fa-plus-circle"></i> Add project
+      </div>
+    </a>
+     
+      
+        
+  </div> 
+   <hr style="width: 100% !important;">
+   
+   
+
+<!-- All Project Thumbnails -->
+<div class="all_projects row" style="margin:0; padding-left: 2%; ">
+  <?php foreach($projects as $project): ?>
+
+          <div class="thumbnail_shot col-xs-3 col-md-3">
+            <a href="/projects/show/<?php echo $project->id; ?>" >
+              <?php 
+              $files = explode(",", $project->files);
+              $file = $files[0];
+              ?>
+              <?php if(empty($file)): ?>
+              <img src="/img/images.jpg">
+              <?php else: ?>
+              <img src="<?php echo $file; ?>">
+              <?php endif; ?>
+              <div id="img_ribbon"> <?php echo $project->title; ?> </div></a>
+              <div class="caption_wrapper">
+                <div class="edit-project">
+                  <a href="/profile/setting"><i class="fa fa-edit" title="Edit"></i> Edit</a>
+                </div>          
+                <ul class="caption">         
+                  <li><i class="fa fa-eye"></i> <?php echo $project->views; ?> </li>
+                  <li><a href="#"><i class="fa fa-comment"></i> <?php echo $project->comment_count; ?> </a></li>
+                  <li><a href="#"><i class="fa fa-heart"></i> <?php echo $project->favorite; ?> </a></li>
+                </ul>
+          	</div>      
+      	  </div>
+
+  <?php endforeach; ?>
+
+ 
+  </div>
+  <div class="pagi">
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+</div>

@@ -1,0 +1,50 @@
+
+<?php $__env->startSection('head'); ?>
+
+<script>
+
+$(document).ready(function() {
+  
+  $('.cover-item').click(function(e){
+    e.preventDefault();
+    window.location = $(this).find('a:first').attr('href');
+  });
+  
+});
+
+
+</script>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('content'); ?>
+
+  <div class="row">
+  
+    <div class="span12">
+        <div class="shield">
+          <h1>Tutorials</h1>
+          <?php if (Sentry::Check() && Sentry::getUser()->hasAccess('is_admin')): ?>
+          <a href="/tutorials/create" class="btn btn-admin"><i class="icon-plus"></i></a>
+          <?php endif; ?>
+        </div>
+        
+        <?php foreach($tutorials as $tutorial): ?>
+        <div class="cover-item">
+          <div class="cover-item-content">
+            <h2><a href="/tutorials/show/<?php echo $tutorial->id; ?>"><?php echo $tutorial->title; ?></a></h2>
+            <p><?php echo $tutorial->description; ?></p>
+          </div>
+          <div class="cover-item-author">By <?php echo $tutorial->user->fullname(); ?> <span class="muted">– <?php echo date("d.m.Y", strtotime($tutorial->created_at));; ?></span></div>
+          
+        </div>
+        <?php endforeach; ?>
+        
+        <?php echo $tutorials->links();; ?>
+
+        
+    </div>
+    
+  </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

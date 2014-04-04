@@ -1,0 +1,61 @@
+
+<?php $__env->startSection('page_header'); ?>
+	Welcome to the Digital Experience Laboratory – the FabLab at University Bremen
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	<div class="row">
+
+		<div class="span12">
+		
+			<div class="content">
+
+				<div class="alert alert-error"><strong><i class="icon-warning-sign"></i> This site is under construction!</strong></div>
+				
+				<?php /*
+				<div class="hero-unit">
+					<h1>Heading</h1>
+					<p>Tagline</p>
+					<p>
+					<a class="btn btn-primary btn-large">Learn more</a>
+					</p>
+				</div>
+				*/?>
+				
+				<p class="lead">On this website you will find all necessary information about the FabLab at University Bremen.</p>
+				
+
+			</div>
+		</div>
+	
+	</div>
+
+	<div class="row">
+			
+		<div class="span12">
+
+			<div class="content">
+				<div class="page-header">
+					<h3><i class="icon-user"></i> Contact information</h3>
+				</div>
+				<a href="http://dimeb.de" target="_blank"><img src="/img/dimeb_logo.gif" style="height: 50px;"></a>
+
+				<p>Universität Bremen<br />
+				Bibliothekstraße 1<br />
+				28359 Bremen
+				</p>
+				<p>
+				Dr. Dennis Krannich<br />
+					krannich ( at ) tzi.de<br />
+					0421 - 218-64384
+				</p>
+			
+			</div>
+		
+		</div>
+	
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

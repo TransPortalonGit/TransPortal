@@ -1,0 +1,72 @@
+<!--This is the contents of Inventory page-->
+<div class="search_box search">
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder=" search inventory ">
+    </div>
+    <button type="submit" class="btn btn-search "> <i class="fa fa-search"></i></button>
+  </form>
+</div> 
+<br>
+<div style="position: relative">
+  <p>You have borrowed 6 items. <span style = "color: red">1</span> is <span style = "color: red">overdued</span> . </p>
+</div>
+ <!--This is the inventory table of Inventory page-->
+<div class="item_table table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>ID</th>
+          <th>Borrowed date</th>
+          <th>Due date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arduino Uno</td>
+          <td>#0001</td>
+          <td>12/02/2013</td>
+          <td>24/02/2013</td>
+          <td>on loan</td>
+        </tr>
+        <tr>
+          <td>solder kit</td>
+          <td>#0003</td>
+          <td>12/02/2013</td>
+          <td>24/02/2013</td>
+          <td>on loan</td>
+        </tr>
+        <tr> 
+          <td>Lego set</td>
+          <td>#0001</td>
+          <td>12/02/2013</td>
+          <td>24/02/2013</td>
+          <td class="caution">on loan</td>
+        </tr>
+        <tr> 
+          <td>Lego set</td>
+          <td>#0001</td>
+          <td>12/02/2013</td>
+          <td>24/02/2013</td>
+          <td class="caution">on loan</td>
+        </tr>
+        <tr>
+          <td>solder kit</td>
+          <td>#0003</td>
+          <td>12/02/2013</td>
+          <td>24/02/2013</td>
+          <td>on loan</td>
+        </tr>
+        <tr>
+          <td>solder kit</td>
+          <td>#0003</td>
+          <td>12/02/2013</td>
+          <td>15/02/2013</td>
+          <td class="overdued">overdued</td>
+        </tr>
+        
+      </tbody>
+    </table>
+</div>

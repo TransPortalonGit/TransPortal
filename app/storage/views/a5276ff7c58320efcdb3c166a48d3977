@@ -1,0 +1,4 @@
+	                <ul>
+	                    <li <?php if (strpos(URL::current(),'home')!==false) echo 'class="active"';?>><a href="/home" title="Welcome">Home</a></li>
+	                    <li <?php if (strpos(URL::current(),'documentation')!==false) echo 'class="active"';?>><a href="/documentation" title="Documentation">Documentation</a></li>
+	                </ul>

@@ -1,0 +1,43 @@
+
+<?php $__env->startSection('head'); ?>
+<style>
+
+
+</style>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-book"></i> Tutorials
+	<?php if (Sentry::getUser()->hasAccess('is_admin')): ?>
+	<a href="/tutorials/create" class="pull-right btn btn-primary"><i class="icon-plus"></i></a>
+	<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('content'); ?>
+
+	<div class="row">
+	
+		<div class="span12">
+			<div class="content">
+				<?php foreach($tutorials as $tutorial): ?>
+				<div class="cover-item">
+					<div class="cover-item-content">
+						<h2><a href="/tutorials/show/<?php echo $tutorial->id; ?>"><?php echo $tutorial->title; ?></a></h2>
+						<p><?php echo $tutorial->description; ?></p>
+					</div>
+					<div class="cover-item-author">By <?php echo $tutorial->user_id; ?> Dr. Dennis Krannich <span class="muted">– <?php echo date("d.m.Y", strtotime($tutorial->created_at));; ?></span></div>
+					
+				</div>
+				<?php endforeach; ?>
+				
+				<?php echo $tutorials->links();; ?>
+
+				
+			</div>
+		</div>
+		
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

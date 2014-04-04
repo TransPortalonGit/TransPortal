@@ -1,0 +1,5 @@
+<?php if($users->inlab == 1): ?>
+Hello, <?php echo $users->first_name; ?> you are now in the lab. Welcome!
+<?php else: ?>
+Hello, <?php echo $users->first_name; ?> you are now exiting the lab. Bye!
+<?php endif; ?>

@@ -1,0 +1,52 @@
+
+<?php $__env->startSection('content'); ?>
+
+<ol class="breadcrumb">
+  <li><span class="fa fa-home"></span><a href="/admin"> Home</a></li>
+  <li><a href="/admin/inventory">Inventory</a></li>
+  <li class="active">View item</li>
+<hr>
+</ol>
+
+<div class="row">
+	<div class="col-xs-3">
+		<!-- Username -->
+		<div>
+			<label>Id:</label>
+			<?php echo $item->id; ?>
+		</div>
+		<div>
+			<label>Name:</label>
+			<?php echo $item->name; ?>
+		</div>
+		<div>
+			<label>User's id loaned to:</label>
+			<?php echo $item->user_id; ?>
+		</div>
+		<div>
+			<label>Quantity:</label>
+			<?php echo $item->quantity; ?>
+		</div>
+		<div>
+			<label>Statuts:</label>
+			<?php echo $item->status; ?>
+		</div>
+		<div>
+			<label>Category:</label>
+			<?php echo $item->category; ?>
+		</div>
+		<div>
+			<label>Date Added:</label>
+			<?php echo $item->date_added; ?>
+		</div>
+		<div>
+			<label>Available at:</label>
+			<?php echo $item->becomes_available; ?>
+		</div>
+			<label>Preview:</label>
+			<p> <img src="/items/<?php echo $item->image; ?>" style="width:300px;" /> </p>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

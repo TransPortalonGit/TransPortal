@@ -1,0 +1,36 @@
+
+
+<?php $__env->startSection('head'); ?>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+		
+});
+
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<div class="row">
+		<div class="span12" id="project">
+			<div class="shield">
+				<h1><?php echo $project->title; ?></h1>
+				<p class="author">By <?php echo $project->user->fullname(); ?> 	<span class="muted">– <?php echo date("d.m.Y", strtotime($project->created_at));; ?></span></p>
+				<?php if (Sentry::check() && Sentry::getUser()->hasAccess('is_admin')): ?>
+				<a href="/projects/edit/<?php echo $project->id; ?>" class="btn btn-admin"><i class="icon-pencil"></i></a>
+				<?php endif; ?>
+			</div>
+			<div class="content"><?php echo $project->content; ?></div>
+			<?php $files = explode(',', $project->files); ?>
+			<?php foreach ($files as $file): ?>
+			
+				<img src="<?php echo $file; ?>" />
+			
+			<?php endforeach; ?>
+
+		</div>
+		
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

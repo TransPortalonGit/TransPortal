@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	
+	<title>dxlab - the fablab at university bremen</title>
+
+	<?php echo $__env->make('layouts._head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	<?php echo $__env->yieldContent('head'); ?>
+
+</head>
+<body>
+
+<header id="topnav">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<a href="/home" class="logo">dxlab</a>
+				<nav class="menu pull-right">
+					<?php echo $__env->make('layouts._navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				</nav>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="ribbon-wrapper">
+		<div class="ribbon ribbon-red">BETA</div>
+	</div>
+</header>
+
+<div class="content_container container">
+	<?php echo $__env->yieldContent('content'); ?>	
+</div>
+
+
+<footer>
+	&copy; 2013 by dxlab
+</footer>
+
+</body>
+</html>

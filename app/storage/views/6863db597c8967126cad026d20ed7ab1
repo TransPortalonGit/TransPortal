@@ -1,0 +1,15 @@
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-user"></i> Register for a new account
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<div class="row">
+		<div class="span12">
+		<h2>Thank's for registering.</h2>
+		<p>An email has been sent to your account with further instructions how to activate your account.</p>
+		</div>
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

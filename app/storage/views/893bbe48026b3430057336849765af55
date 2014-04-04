@@ -1,0 +1,157 @@
+
+<?php $__env->startSection('content'); ?>
+
+<ol class="breadcrumb">
+  <li><span class="fa fa-home"></span><a href="/admin"> Home</a></li>
+  <li><a href="/admin/users">Users</a></li>
+  <li class="active">Edit user</li>
+<hr>
+</ol>
+
+	<form method="post" action="/admin/users/update" class="form-horizontal" autocomplete="off">
+
+			
+				<!-- CSRF Token -->
+				<input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>" />
+				<input type="hidden" name="_id" value="<?php echo $user->id; ?>" />
+		<div class="row">
+			<div class="col-xs-3">
+				<!-- Role -->
+				<div class="control-group <?php echo $errors->has('username') ? 'error' : ''; ?>">
+				<label class="control-label" for="city">Role</label>
+					<div>
+					<select name="Role" id="Role">
+					<?php if ($user->hasAccess("is_admin")): ?>
+					<option value="1">admin</option>
+					<option value="2">member</option>
+					<?php else: ?>
+					<option value="2">member</option>
+					<option value="1">admin</option>
+					<?php endif; ?>
+					</select>
+					</div>
+				</div>
+				<!-- Username -->
+				<div class="control-group <?php echo $errors->has('username') ? 'error' : ''; ?>">
+				<label class="control-label" for="username">Username*</label>
+					<div class="controls">
+						<input type="text" name="username" id="username" value="<?php echo $user->username; ?>" />
+						<?php echo $errors->first('username', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- Title -->
+				<div class="control-group <?php echo $errors->has('title') ? 'error' : ''; ?>">
+				<label class="control-label" for="title">Title</label>
+					<div class="controls">
+						<input type="text" name="title" id="title" value="<?php echo $user->title; ?>" />
+						<?php echo $errors->first('first_name', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+
+				<!-- First Name -->
+				<div class="control-group <?php echo $errors->has('first_name') ? 'error' : ''; ?>">
+				<label class="control-label" for="first_name">First Name*</label>
+					<div class="controls">
+						<input type="text" name="first_name" id="first_name" value="<?php echo $user->first_name; ?>" />
+						<?php echo $errors->first('first_name', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- Last Name -->
+				<div class="control-group <?php echo $errors->has('last_name') ? 'error' : ''; ?>">
+					<label class="control-label" for="last_name">Last Name*</label>
+					<div class="controls">
+						<input type="text" name="last_name" id="last_name" value="<?php echo $user->last_name; ?>" />
+						<?php echo $errors->first('last_name', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- Email -->
+				<div class="control-group <?php echo $errors->has('email') ? 'error' : ''; ?>">
+					<label class="control-label" for="email">Email*</label>
+					<div class="controls">
+						<input type="text" name="email" id="email" value="<?php echo $user->email; ?>" />
+						<?php echo $errors->first('email', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-3">
+
+				<!-- Company -->
+				<div class="control-group <?php echo $errors->has('company') ? 'error' : ''; ?>">
+				<label class="control-label" for="company">Company</label>
+					<div class="controls">
+						<input type="text" name="company" id="company" value="<?php echo $user->company; ?>" />
+						<?php echo $errors->first('company', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+			
+				<!-- Street -->
+				<div class="control-group <?php echo $errors->has('street') ? 'error' : ''; ?>">
+				<label class="control-label" for="street">Street</label>
+					<div class="controls">
+						<input type="text" name="street" id="street" value="<?php echo $user->street; ?>" />
+						<?php echo $errors->first('street', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- Zipcode -->
+				<div class="control-group <?php echo $errors->has('zipcode') ? 'error' : ''; ?>">
+				<label class="control-label" for="zipcode">Zipcode</label>
+					<div class="controls">
+						<input type="text" name="zipcode" id="zipcode" value="<?php echo $user->zipcode; ?>" />
+						<?php echo $errors->first('zipcode', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- City -->
+				<div class="control-group <?php echo $errors->has('city') ? 'error' : ''; ?>">
+				<label class="control-label" for="city">City</label>
+					<div class="controls">
+						<input type="text" name="city" id="city" value="<?php echo $user->city; ?>" />
+						<?php echo $errors->first('city', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+
+				<!-- Privileges -->
+				<div class="control-group <?php echo $errors->has('permissions') ? 'error' : ''; ?>">
+				<label class="control-label" for="permissions">Permissions</label>
+					<div class="controls">
+						<?php if($user->hasAccess('3d_printer')): ?>
+						<input type="checkbox" name="p_3dprinter" id="p_3dprinter" value="1" checked />3D Printer
+						<?php else: ?>
+						<input type="checkbox" name="p_3dprinter" id="p_3dprinter" value="1" />3D Printer
+						<?php endif; ?>
+						<p> </p>
+						<?php if($user->hasAccess('lasercutter')): ?>
+						<input type="checkbox" name="p_lasercutter" id="p_lasercutter" value="1" checked />Laser Cutter
+						<?php else: ?>
+						<input type="checkbox" name="p_lasercutter" id="p_lasercutter" value="1" />Laser Cutter
+						<?php endif; ?>
+						<?php echo $errors->first('permissions', '<span class="help-inline">:message</span>'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="control-group">
+					<label class="control-label" for=""></label>
+					<div class="controls">
+						* required fields
+						<p>
+						</p>
+					</div>
+				</div>
+			<!-- Form actions -->
+				<div class="control-group">
+					<div class="controls">
+						<a href="/admin/users"><button type="button" class="btn btn-default"> Cancel</button></a>
+						<button type="submit" onclick="<?php echo $user->id; ?>" class="btn btn-primary"> Apply</button>
+					</div>
+				</div>
+			</form>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

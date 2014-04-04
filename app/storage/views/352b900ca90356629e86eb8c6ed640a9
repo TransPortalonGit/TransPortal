@@ -1,0 +1,227 @@
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-book"></i> <a href="/tutorials">Tutorials</a> <i class="icon-angle-right"></i> Create new tutorial
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('head'); ?>
+<?php echo HTML::script('/js/bootstrap-wysiwyg.js'); ?>
+<?php echo HTML::script('/js/jquery.hotkeys.js'); ?>
+
+<?php echo HTML::style('/css/redactor.css'); ?>
+<?php echo HTML::script('/js/redactor.min.js'); ?>
+
+
+<style type="text/css">
+		
+	.redactor_editor hr {
+		padding: 0;
+		border: none;
+		border-top: medium double #ccc;
+		color: #333;
+		text-align: center;
+		margin-bottom: -5px;
+	}
+	
+	.redactor_editor hr:after {
+		content: "New Step";
+		display: inline-block;
+		position: relative; 
+		top: -12px;  
+		font-size: 12px;
+		line-height: 12px;
+		padding: 0 12px;
+		background: white;
+		color: #bbb;
+	}
+	
+	.redactor_toolbar li a {
+		/*
+		background-image: none;
+		content:"\f121";
+		font-size: 14px;
+		color: #000;
+		line-height: 25px;
+		font-family:'FontAwesome';
+		*/
+	}
+
+	/*
+	body .redactor_toolbar li a.redactor_btn_html				{ content:"\f121"; }
+	body .redactor_toolbar li a.redactor_btn_formatting		    { background-position: -25px; }
+	body .redactor_toolbar li a.redactor_btn_bold				{ background-position: -50px; }
+	body .redactor_toolbar li a.redactor_btn_italic			    { background-position: -75px; }
+	body .redactor_toolbar li a.redactor_btn_deleted		 	{ background-position: -500px; }
+	body .redactor_toolbar li a.redactor_btn_unorderedlist 	    { background-position: -100px; }
+	body .redactor_toolbar li a.redactor_btn_orderedlist   	    { background-position: -125px; }
+	body .redactor_toolbar li a.redactor_btn_outdent	 		{ background-position: -150px; }
+	body .redactor_toolbar li a.redactor_btn_indent		 	  	{ background-position: -175px; }
+	body .redactor_toolbar li a.redactor_btn_image		 		{ background-position: -200px; }
+	body .redactor_toolbar li a.redactor_btn_video		 		{ background-position: -225px; }
+	body .redactor_toolbar li a.redactor_btn_file		 		{ background-position: -250px; }
+	body .redactor_toolbar li a.redactor_btn_table		 		{ background-position: -275px; }
+	body .redactor_toolbar li a.redactor_btn_link		 		{ background-position: -300px; }
+	body .redactor_toolbar li a.redactor_btn_fontcolor		 	{ background-position: -325px; }
+	body .redactor_toolbar li a.redactor_btn_backcolor		 	{ background-position: -350px; }
+	body .redactor_toolbar li a.redactor_btn_alignleft		  	{ background-position: -375px; }
+	body .redactor_toolbar li a.redactor_btn_aligncenter		{ background-position: -400px; }
+	body .redactor_toolbar li a.redactor_btn_alignright		  	{ background-position: -425px; }
+	body .redactor_toolbar li a.redactor_btn_justify		 	{ background-position: -450px; }
+	body .redactor_toolbar li a.redactor_btn_horizontalrule 	{ background-position: -475px; }
+	body .redactor_toolbar li a.redactor_btn_underline		 	{ background-position: -525px; }
+	
+	body .redactor_toolbar li a.redactor_btn_fullscreen		 	{ background-position: -550px; }
+	body .redactor_toolbar li a.redactor_btn_normalscreen		{ background-position: -575px; }
+	body .redactor_toolbar li a.redactor_btn_clips		 		{ background-position: -600px; }
+	
+	body .redactor_toolbar li a.redactor_btn_alignment	 		{ background-position: -625px; }
+	
+	body .redactor_toolbar li a.redactor_btn_fontfamily	 		{ background-position: -650px; }
+	body .redactor_toolbar li a.redactor_btn_fontsize	 		{ background-position: -675px; }
+	
+	body .redactor_toolbar li a.redactor_btn_direction	 		{ background-position: -700px; }
+	body .redactor_toolbar li a.redactor_btn_lists		 		{ background-position: -725px; }
+	body .redactor_toolbar li a.redactor_btn_font		 		{ background-position: -750px; }
+	
+	body .redactor_toolbar li a.redactor_btn_h1			 		{ background-position: -775px; }
+	body .redactor_toolbar li a.redactor_btn_h2			 		{ background-position: -800px; }
+	body .redactor_toolbar li a.redactor_btn_h3			 		{ background-position: -825px; }
+	body .redactor_toolbar li a.redactor_btn_quote		 		{ background-position: -850px; }
+	body .redactor_toolbar li a.redactor_btn_pre		 		{ background-position: -875px; }
+*/
+
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	
+	
+/*	
+	$("form").submit(function() {
+		var html = $('#editor').html();
+		$("#htmlcode").val(html);
+	});
+*/	
+	
+});
+
+
+$(function(){
+	$('#redactor_content').redactor({
+		imageUpload: '/tutorials/imageupload',
+		//fileUpload: '/tutorials/fileupload',
+		//imageGetJson: '/tutorials/getjson'
+		toolbarFixed: true,
+		toolbarFixedTopOffset: 75, 
+		buttons: ['horizontalrule', '|', 'formatting', '|', 'bold', 'italic', 'underline', '|',
+'unorderedlist', 'orderedlist', 'outdent', 'indent', '|',
+'image', 'video', 'file', 'link', '|', 'html' ],
+		wym: true,
+		formattingTags: ['p', 'blockquote', 'pre', 'h2', 'h3'],
+		langs: {
+				en: {
+					html: 'HTML',
+					video: 'Insert Video',
+					image: 'Insert Image',
+					link: 'Link',
+					link_insert: 'Insert link',
+					unlink: 'Unlink',
+					formatting: 'Formatting',
+					paragraph: 'Normal text',
+					quote: 'Quote',
+					code: 'Code',
+					header2: 'Section',
+					header3: 'Heading',
+					bold: 'Bold',
+					italic: 'Italic',
+					unorderedlist: 'Unordered List',
+					orderedlist: 'Ordered List',
+					outdent: 'Outdent',
+					indent: 'Indent',
+					cancel: 'Cancel',
+					insert: 'Insert',
+					save: 'Save',
+					_delete: 'Delete',
+					rows: 'Rows',
+					columns: 'Columns',
+					add_head: 'Add Head',
+					delete_head: 'Delete Head',
+					title: 'Title',
+					image_position: 'Position',
+					none: 'None',
+					left: 'Left',
+					right: 'Right',
+					image_web_link: 'Image Web Link',
+					text: 'Text',
+					mailto: 'Email',
+					web: 'URL',
+					video_html_code: 'Video Embed Code',
+					file: 'Insert File',
+					upload: 'Upload',
+					download: 'Download',
+					choose: 'Choose',
+					or_choose: 'Or choose',
+					drop_file_here: 'Drop file here',
+					align_left: 'Align text to the left',
+					align_center: 'Center text',
+					align_right: 'Align text to the right',
+					align_justify: 'Justify text',
+					horizontalrule: 'Add Section',
+					deleted: 'Deleted',
+					anchor: 'Anchor',
+					link_new_tab: 'Open link in new tab',
+					underline: 'Underline',
+					alignment: 'Alignment',
+					filename: 'Name (optional)',
+				}
+		},
+		
+	});
+});
+
+</script>
+
+
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<?php echo Form::open(); ?>
+
+
+<?php echo (isset($tutorial)) ? Form::hidden('_id', $tutorial->id) : ''; ?>
+
+
+<div class="well">
+	<div class="row">
+		<div class="span11">
+			
+			<?php echo Form::text('title', (isset($tutorial)) ? $tutorial->title : '' , array(
+				'placeholder' => 'Title',
+				'class' => 'span11',
+			));; ?>
+
+			<?php echo Form::textarea('description', (isset($tutorial)) ? $tutorial->description : '' , array(
+				'placeholder' => 'Description',
+				'class' => 'span11',
+				'style' => 'height: 50px;',
+			));; ?>
+
+			<textarea id="redactor_content" name="content" style="display: none;">
+				<?php echo (isset($tutorial)) ? $tutorial->content : '<hr><h2>Step title</h2>'; ?>
+			</textarea>			
+			
+			<p>&nbsp;</p>
+			<input type="submit" value="Save tutorial" class="btn btn-primary">
+
+		</div>
+	</div>
+
+</div>
+	<?php echo Form::close(); ?>
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

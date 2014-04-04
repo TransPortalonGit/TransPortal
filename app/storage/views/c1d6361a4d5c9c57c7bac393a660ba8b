@@ -1,0 +1,66 @@
+					<select class="nav-select-box visible-phone" style="width: 125px; margin-top: 10px;">
+
+						<option value="/home" <?php echo ( preg_match("/^home/i", Request::path()) ) ? 'selected' : ''; ?>>Home</option>
+						<option value="/tutorials" <?php echo ( preg_match("/^tutorials/i", Request::path()) ) ? 'selected' : ''; ?>>Tutorials</option>
+						<option value="/inventory" <?php echo ( preg_match("/^inventory/i", Request::path()) ) ? 'selected' : ''; ?>>Inventory</option>
+						<option value="/projects" <?php echo ( preg_match("/^projects/i", Request::path()) ) ? 'selected' : ''; ?>>Projects</option>
+
+	                    <?php if (Sentry::check() ): ?> 
+
+							<option value="/profile" <?php echo ( preg_match("/^profile/i", Request::path()) ) ? 'selected' : ''; ?>>Profile</option>
+							<?php if (Sentry::getUser()->hasAccess('is_admin') ): ?>
+							<option value="/admin" <?php echo ( preg_match("/^admin/i", Request::path()) ) ? 'selected' : ''; ?>>Admin</option>
+							<?php endif; ?>
+							<option value="/account/logout">Log out</option>
+
+						<?php else: ?>
+						
+						<option value="/account/register" <?php echo ( preg_match("/^account\/register/i", Request::path()) ) ? 'selected' : ''; ?>>Register</option>
+						<option value="/account/login">Log in</option>
+						
+						<?php endif; ?>
+						
+					</select>
+
+					
+					<ul class="nav nav-pills hidden-phone" style="margin-top: 10px;">
+	                    <li <?php echo ( preg_match("/^home/i", Request::path()) ) ? 'class="active"' : ''; ?>><a href="/home" title="Welcome">Home</a></li>
+
+	                    <li <?php echo ( preg_match("/^tutorials/i", Request::path()) ) ? 'class="active"' : ''; ?>><a href="/tutorials" title="Tutorials">Tutorials</a></li>
+	                    
+	                    <li <?php echo ( preg_match("/^inventory/i", Request::path()) ) ? 'class="active"' : ''; ?>><a href="/inventory">Inventory</a></li>
+	                    
+	                    <li <?php echo ( preg_match("/^projects/i", Request::path()) ) ? 'class="active"' : ''; ?>><a href="/projects">Projects</a></li>
+	                    
+	                    <?php if (Sentry::check()): ?> 
+	                    <li class="dropdown pull-right <?php echo ( preg_match("/^profile/i", Request::path()) ) ? 'active' : ''; ?>" id="dropdown-menu" style="border-left: solid 1px #ccc; padding-left: 5px; margin-left: 3px;">
+			            	<a class="dropdown-toggle" data-toggle="dropdown" href="#dropdown-menu"><?php echo ucfirst(Sentry::getUser()->username); ?><b class="caret"></b></a>
+							<ul class="dropdown-menu" style="margin: 0px">
+								<li><a href="/profile" title="Profile">Profile</a></li>
+								<?php if (Sentry::getUser()->hasAccess('is_admin')): ?>
+								<li class="divider"></li>
+								<li><a href="/admin" title="Logout">Admin</a></li>
+								<?php endif; ?>
+								<li><a href="/account/logout" title="Log out">Log out</a></li>
+							</ul>
+	                    </li>
+						<?php else: ?>
+
+						<li style="border-left: solid 1px #ccc; padding-left: 5px; margin-left: 3px;" <?php echo ( preg_match("@^account/register@i", Request::path()) ) ? 'class="active"' : ''; ?>><a href="/account/register">Register</a></li>
+
+	                    <li class="dropdown pull-right" id="dropdown-menu">
+			            	<a class="dropdown-toggle" data-toggle="dropdown" href="#dropdown-menu">Login<b class="caret"></b></a>
+							<div class="dropdown-menu">
+								<form style="margin: 0px" accept-charset="UTF-8" action="/account/login" method="post">
+									<input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>" />
+									<fieldset class='textbox' style="padding:10px">
+										<input style="margin-top: 8px" type="text" placeholder="Username" name="username"/>
+										<input style="margin-top: 8px" type="password" placeholder="Passsword" name="password"/>
+										<input class="btn btn-primary btn-block" name="commit" type="submit" value="Log In"/>
+									</fieldset>
+								</form>
+							</div>
+			           </li>
+	                    
+						<?php endif; ?>
+	                </ul>

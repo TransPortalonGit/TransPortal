@@ -1,0 +1,32 @@
+
+<?php $__env->startSection('content'); ?>
+
+<h1><i class="icon-user"></i> Forgot your password?</h1>
+
+<form method="post" action="" class="form-horizontal">
+	<!-- CSRF Token -->
+	<input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>" />
+	
+	<?php echo Session::has('error') ? '<p class="alert alert-warning">' . Session::get('error') . '</p>' : ''; ?>
+
+	<?php echo Session::has('success') ? '<p class="alert alert-success">' . Session::get('success') . '</p>' : ''; ?>
+
+	<!-- Email -->
+	<div class="control-group <?php echo $errors->has('username') ? 'error' : ''; ?>">
+		<label class="control-label" for="username">Username</label>
+		<div class="controls">
+			<input type="text" name="username" id="username" value="<?php echo Input::old('username'); ?>" />
+			<?php echo $errors->first('username', '<span class="help-inline">:message</span>'); ?>
+		</div>
+	</div>
+
+	<!-- Form actions -->
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" class="btn">Submit</button>
+		</div>
+	</div>
+</form>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

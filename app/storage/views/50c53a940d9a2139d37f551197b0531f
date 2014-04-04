@@ -1,0 +1,19 @@
+
+<?php $__env->startSection('page_header'); ?>
+	<i class="icon-briefcase"></i> Inventory
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	<div class="row">
+
+		<div class="span12">
+		
+			<p>Not implemented yet!</p>
+			<p>Here you will find information about our equipment.</p>
+
+		</div>
+	</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

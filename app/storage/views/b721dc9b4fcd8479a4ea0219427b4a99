@@ -1,0 +1,46 @@
+
+<?php $__env->startSection('content'); ?>
+<div class="row">
+	<div class="col-xs-12"> 
+		<div class="content_container container">
+			<div class="profile_header">
+				<div class= "brief_profile">
+				  <a href="#"> <img src="img/profile_img.png" class="img-responsive img-thumbnail" alt="Responsive image" ></a>
+				</div>
+				<div class="bio">
+					<h5><strong> <?php echo $user->username; ?></strong></h5>
+			  		<small>I like creation, I like turrle! </small></br>
+			  		<small><?php echo $user->zipcode; ?> <?php echo $user->city; ?></small> </div>
+				<div class="basic_info">
+				 	<div class="btn-group">
+				  	<button type="button" class="btn btn-default">Project</br>26</button>
+				  	<button type="button" class="btn btn-default">Collections</br>17</button>
+				  	<button type="button" class="btn btn-default">Followings</br>22</button>
+				  	<button type="button" class="btn btn-default">Followers</br>36</button>
+					</div>
+				</div>
+			</div>
+			<div class= "main_tabs container">
+				<ul class="nav nav-pills">
+				  <li class="active">
+				    <a href="#">Dashboard</a>
+				  </li>
+				  <li>
+				    <a href="#">Projects</a>
+				  </li>
+				  <li>
+				    <a href="#">Appointments</a>
+				  </li>
+				  <li>
+				    <a href="#">Inventory</a>
+				  </li>
+				  <li>
+				    <a href="#">Usage Data</a>
+				  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
